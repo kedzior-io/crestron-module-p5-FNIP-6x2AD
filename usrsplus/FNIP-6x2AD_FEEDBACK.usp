@@ -1,0 +1,166 @@
+/****************************************************************/
+/*																*/
+/*	Title: FNIP-6x2AD_FEEDBACK									*/
+/*	Description: Part of the Crestron module responsable for	*/
+/*  feeding Crestron program with level feedback                */
+/*                                                              */
+/* 	Author: Klaatu Verata Necto (klaatuveratanecto@gmail.com)	*/
+/* 	Web: klaatuveratanecto.com	 								*/
+/* 	Date: 08/11/2016 											*/
+/*																*/
+/****************************************************************/
+
+
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#ENCODING_ASCII
+
+String_INPUT _SKIP_, RX$[500];
+
+String_OUTPUT _SKIP_,Ch_1_Level, Ch_2_Level, Ch_3_Level, Ch_4_Level, Ch_5_Level, Ch_6_Level,_SKIP_;
+
+digital_OUTPUT _SKIP_,Ch_1_FB, Ch_2_FB, Ch_3_FB, Ch_4_FB, Ch_5_FB, Ch_6_FB;
+
+INTEGER startPos_ch1,startPos_ch2,startPos_ch3,startPos_ch4,startPos_ch5,startPos_ch6, Ch_1_Level_Int;
+
+STRING searchStr_ch1[20],searchStr_ch2[20],searchStr_ch3[20],searchStr_ch4[20],searchStr_ch5[20],searchStr_ch6[20], tempStr_ch_1[3],tempStr_ch_2[3],tempStr_ch_3[3],tempStr_ch_4[3],tempStr_ch_5[3],tempStr_ch_6[3];
+
+CHANGE RX$
+{
+      searchStr_ch1 = "FN,LEV,1,";
+      searchStr_ch2 = "FN,LEV,2,";
+      searchStr_ch3 = "FN,LEV,3,";
+      searchStr_ch4 = "FN,LEV,4,";
+      searchStr_ch5 = "FN,LEV,5,";
+      searchStr_ch6 = "FN,LEV,6,";
+
+      startPos_ch1 = Find(searchStr_ch1,RX$);
+      startPos_ch2 = Find(searchStr_ch2,RX$);
+      startPos_ch3 = Find(searchStr_ch3,RX$);
+      startPos_ch4 = Find(searchStr_ch4,RX$);
+      startPos_ch5 = Find(searchStr_ch5,RX$);                                             
+      startPos_ch6 = Find(searchStr_ch6,RX$);  
+
+      if (	startPos_ch1 > 0 )
+	  {
+		startPos_ch1 = startPos_ch1 + len(searchStr_ch1);
+		tempStr_ch_1 = mid(RX$, startPos_ch1,Find("\x0a",RX$,startPos_ch1) - startPos_ch1);
+
+		Ch_1_Level = tempStr_ch_1;
+
+		if( ATOI(tempStr_ch_1) > 0)
+		{
+			Ch_1_FB = 1;
+		}
+		else
+		{
+			Ch_1_FB = 0;
+		}
+	  }
+
+      if (	startPos_ch2 > 0 )
+	  {
+		startPos_ch2 = startPos_ch2 + len(searchStr_ch2);
+		tempStr_ch_2 = mid(RX$, startPos_ch2,Find("\x0a",RX$,startPos_ch2) - startPos_ch2);
+		
+		Ch_2_Level = tempStr_ch_2;
+
+		if( ATOI(tempStr_ch_2) > 0)
+		{
+			Ch_2_FB = 1;
+		}
+		else
+		{
+			Ch_2_FB = 0;
+		}
+
+	  }
+
+      if (	startPos_ch3 > 0 )
+	  {
+		startPos_ch3 = startPos_ch3 + len(searchStr_ch3);
+		tempStr_ch_3 = mid(RX$, startPos_ch3,Find("\x0a",RX$,startPos_ch3) - startPos_ch3);
+
+		Ch_3_Level = tempStr_ch_3;
+
+		if( ATOI(tempStr_ch_3) > 0)
+		{
+			Ch_3_FB = 1;
+		}
+		else
+		{
+			Ch_3_FB = 0;
+		}
+
+	  }
+
+      if (	startPos_ch4 > 0 )
+	  {
+		startPos_ch4 = startPos_ch4 + len(searchStr_ch4);
+		tempStr_ch_4 = mid(RX$, startPos_ch4,Find("\x0a",RX$,startPos_ch4) - startPos_ch4);
+        
+		Ch_4_Level = tempStr_ch_4;
+
+		if( ATOI(tempStr_ch_4) > 0)
+		{
+			Ch_4_FB = 1;
+		}
+		else
+		{
+			Ch_4_FB = 0;
+		}
+
+	  }
+
+      if (	startPos_ch5 > 0 )
+	  {
+		startPos_ch5 = startPos_ch5 + len(searchStr_ch5);
+		tempStr_ch_5 = mid(RX$, startPos_ch5,Find("\x0a",RX$,startPos_ch5) - startPos_ch5);
+           
+		Ch_5_Level = tempStr_ch_5;
+
+		if( ATOI(tempStr_ch_5) > 0)
+		{
+			Ch_5_FB = 1;
+		}
+		else
+		{
+			Ch_5_FB = 0;
+		}
+
+
+	  }
+
+      if (	startPos_ch6 > 0 )
+	  {
+		startPos_ch6 = startPos_ch6 + len(searchStr_ch6);
+		tempStr_ch_6 = mid(RX$, startPos_ch6,Find("\x0a",RX$,startPos_ch6) - startPos_ch6);
+
+		Ch_6_Level = tempStr_ch_6;
+
+		if( ATOI(tempStr_ch_6) > 0)
+		{
+			Ch_6_FB = 1;
+		}
+		else
+		{
+			Ch_6_FB = 0;
+		}
+
+	  }
+
+			
+}
+
+
+Function Main()
+{
+
+}
+
+
+
+
+
+

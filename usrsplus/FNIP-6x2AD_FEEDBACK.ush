@@ -1,0 +1,101 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.04.01
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,718,756,854,
+  Exclusions_CDS=
+  Inclusions_CDS=5,6
+  Name=FNIP-6x2AD_FEEDBACK
+  SmplCName=FNIP-6x2AD_FEEDBACK.usp
+  Code=1
+  SysRev5=3.083
+  SMWRev=3.00.00
+  OutputCue1=[~UNUSED~]
+  OutputSigType1=Digital
+  OutputCue2=Ch_1_FB
+  OutputSigType2=Digital
+  OutputCue3=Ch_2_FB
+  OutputSigType3=Digital
+  OutputCue4=Ch_3_FB
+  OutputSigType4=Digital
+  OutputCue5=Ch_4_FB
+  OutputSigType5=Digital
+  OutputCue6=Ch_5_FB
+  OutputSigType6=Digital
+  OutputCue7=Ch_6_FB
+  OutputSigType7=Digital
+  InputList2Cue1=[~UNUSED~]
+  InputList2SigType1=Serial
+  InputList2Cue2=RX$
+  InputList2SigType2=Serial
+  OutputList2Cue1=[~UNUSED~]
+  OutputList2SigType1=Serial
+  OutputList2Cue2=Ch_1_Level
+  OutputList2SigType2=Serial
+  OutputList2Cue3=Ch_2_Level
+  OutputList2SigType3=Serial
+  OutputList2Cue4=Ch_3_Level
+  OutputList2SigType4=Serial
+  OutputList2Cue5=Ch_4_Level
+  OutputList2SigType5=Serial
+  OutputList2Cue6=Ch_5_Level
+  OutputList2SigType6=Serial
+  OutputList2Cue7=Ch_6_Level
+  OutputList2SigType7=Serial
+  OutputList2Cue8=[~UNUSED~]
+  OutputList2SigType8=Serial
+  ParamCue1=[Reference Name]
+  MinVariableInputs=0
+  MaxVariableInputs=0
+  MinVariableInputsList2=2
+  MaxVariableInputsList2=2
+  MinVariableOutputs=7
+  MaxVariableOutputs=7
+  MinVariableOutputsList2=8
+  MaxVariableOutputsList2=8
+  MinVariableParams=0
+  MaxVariableParams=0
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  MPp=1
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_FNIP_6x2AD_FEEDBACK
+  SymJam=NonExclusive
+  FileName=FNIP-6x2AD_FEEDBACK.ush
+  SIMPLPlusModuleEncoding=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
