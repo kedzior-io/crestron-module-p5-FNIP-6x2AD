@@ -6,22 +6,19 @@
   Sgntr=UserSPlus
   RelVrs=1
   IntStrVrs=1
-  SPlusVrs=4.04.01
+  SPlusVrs=4.02.20
   CrossCplrVrs=1.3
-[END]
-[BEGIN]
-  ObjTp=Hd
 [END]
 [BEGIN]
   ObjTp=Symbol
   Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,718,756,854,
-  Exclusions_CDS=
-  Inclusions_CDS=5,6
+  Exclusions_CDS=6
+  Inclusions_CDS=5
   Name=FNIP-6x2AD_DIMMING
   SmplCName=FNIP-6x2AD_DIMMING.usp
   Code=1
   SysRev5=3.083
-  SMWRev=3.00.00
+  SMWRev=2.02.05
   InputCue1=[~UNUSED~]
   InputSigType1=Digital
   InputCue2=Ch_1_Hold
@@ -78,13 +75,27 @@
   InputList2SigType5=Serial
   InputList2Cue6=ch6_Level
   InputList2SigType6=Serial
+  InputList2Cue7=[~UNUSED~]
+  InputList2SigType7=Serial
+  InputList2Cue8=Ch1_Dim_Level
+  InputList2SigType8=Serial
+  InputList2Cue9=Ch2_Dim_Level
+  InputList2SigType9=Serial
+  InputList2Cue10=Ch3_Dim_Level
+  InputList2SigType10=Serial
+  InputList2Cue11=Ch4_Dim_Level
+  InputList2SigType11=Serial
+  InputList2Cue12=Ch5_Dim_Level
+  InputList2SigType12=Serial
+  InputList2Cue13=Ch6_Dim_Level
+  InputList2SigType13=Serial
   OutputList2Cue1=TX
   OutputList2SigType1=Serial
   ParamCue1=[Reference Name]
   MinVariableInputs=22
   MaxVariableInputs=22
-  MinVariableInputsList2=6
-  MaxVariableInputsList2=6
+  MinVariableInputsList2=13
+  MaxVariableInputsList2=13
   MinVariableOutputs=0
   MaxVariableOutputs=0
   MinVariableOutputsList2=1
@@ -115,7 +126,6 @@
   SPlus2CompiledName=S2_FNIP_6x2AD_DIMMING
   SymJam=NonExclusive
   FileName=FNIP-6x2AD_DIMMING.ush
-  SIMPLPlusModuleEncoding=0
 [END]
 [BEGIN]
   ObjTp=Dp

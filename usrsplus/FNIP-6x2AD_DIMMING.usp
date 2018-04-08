@@ -16,10 +16,13 @@
 #ENCODING_ASCII
 
 // Store levels 
-String_INPUT ch1_Level[3], ch2_Level[3], ch3_Level[3], ch4_Level[3], ch5_Level[3], ch6_Level[3];
+String_INPUT ch1_Level[3], ch2_Level[3], ch3_Level[3], ch4_Level[3], ch5_Level[3], ch6_Level[3], _SKIP_;
 
 // Digital Input when button is hold 
 digital_INPUT _SKIP_, Ch_1_Hold, Ch_2_Hold, Ch_3_Hold, Ch_4_Hold, Ch_5_Hold, Ch_6_Hold,_SKIP_,Ch_1_Up_Hold,Ch_2_Up_Hold, Ch_3_Up_Hold, Ch_4_Up_Hold, Ch_5_Up_Hold, Ch_6_Up_Hold,_SKIP_,Ch_1_Down_Hold,Ch_2_Down_Hold, Ch_3_Down_Hold, Ch_4_Down_Hold, Ch_5_Down_Hold, Ch_6_Down_Hold,_SKIP_;
+
+string_INPUT Ch1_Dim_Level[3], Ch2_Dim_Level[3], Ch3_Dim_Level[3], Ch4_Dim_Level[3], Ch5_Dim_Level[3], Ch6_Dim_Level[3];
+
        
 // String output 
 String_OUTPUT TX;
@@ -381,6 +384,42 @@ RELEASE Ch_6_Hold
 	TX = "FN,STOP,6\r\n"; 
 }
 
+/* ----------------------------------- Dimming by setting level  --------------------------------------------- */
+
+CHANGE Ch1_Dim_Level
+{
+	TX = "FN,LEV,1,"+ Ch1_Dim_Level+"\r\n";
+	ch1_Level = Ch1_Dim_Level;
+}
+
+CHANGE Ch2_Dim_Level
+{
+	TX = "FN,LEV,2,"+ Ch2_Dim_Level+"\r\n";
+	ch2_Level = Ch2_Dim_Level;
+}
+
+CHANGE Ch3_Dim_Level
+{
+	TX = "FN,LEV,3,"+ Ch3_Dim_Level+"\r\n";
+	ch3_Level = Ch3_Dim_Level;
+}
+
+CHANGE Ch4_Dim_Level
+{
+	TX = "FN,LEV,4,"+ Ch4_Dim_Level+"\r\n";
+	ch4_Level = Ch4_Dim_Level;
+
+}
+CHANGE Ch5_Dim_Level
+{
+	TX = "FN,LEV,5,"+ Ch5_Dim_Level +"\r\n";
+	ch5_Level = Ch5_Dim_Level;
+}
+CHANGE Ch6_Dim_Level
+{
+	TX = "FN,LEV,6,"+ Ch6_Dim_Level +"\r\n";
+	ch6_Level = Ch6_Dim_Level;
+}
 
 Function Main()
 {
