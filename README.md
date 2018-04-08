@@ -28,3 +28,5 @@ Product link: http://futurenow.hu/index.php/products/ethernet-modules/265-fnip-6
 - OutputLevels        - reports channellevel as a string
 
 Contact: klaatuveratanecto@gmail.com
+
+![P5 FNIP-6x2AD Ethernet Dimmer](https://imgur.com/a/aVKPg)
