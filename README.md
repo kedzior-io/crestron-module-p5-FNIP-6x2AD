@@ -29,4 +29,4 @@ Product link: http://futurenow.hu/index.php/products/ethernet-modules/265-fnip-6
 
 Contact: klaatuveratanecto@gmail.com
 
-![P5 FNIP-6x2AD Ethernet Dimmer](https://imgur.com/a/aVKPg)
+![P5 FNIP-6x2AD Ethernet Dimmer](https://i.imgur.com/b2mHK2k.jpg)
